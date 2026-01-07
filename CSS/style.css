@@ -93,15 +93,20 @@ section {
 
 /* --- Home Section --- */
 .home { 
-    flex-direction: row; 
-    justify-content: space-between; 
+    display: flex;
+    flex-direction: column; /* Stacks image on top, text below */
+    justify-content: center; 
     align-items: center; 
+    text-align: center; /* Centers all text content */
+    min-height: 100vh;
 }
 
 .home-content {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    align-items: center; /* Centers headings and scramble text */
+    max-width: 800px;
+    margin-top: 2rem;
 }
 
 .home-img { 
@@ -110,7 +115,8 @@ section {
     height: 300px; 
     display: flex; 
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
+    margin-bottom: 1rem; /* Space between image and "Hello" text */
 }
 
 .glowing-circle { 
@@ -149,8 +155,9 @@ section {
 @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
 .social-media {
-    margin-top: 80px; 
+    margin-top: 40px; /* Reduced from 80px for better vertical balance */
     display: flex;
+    justify-content: center; /* Ensures icons are centered */
     gap: 15px;
 }
 
